@@ -1,0 +1,24 @@
+{
+    "name": "worstinme/yii2-comments",
+    "description": "Yii2 Comments Extension",
+    "type": "yii2-extension",
+    "keywords": ["yii2","comments","uikit"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Evgeny Zakirov",
+            "email": "box@flyleaf.su"
+        }
+    ],
+    "require": {
+        "yiisoft/yii2": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "worstinme\\comments\\": ""
+        }
+    },
+    "extra": {
+        "bootstrap": "worstinme\\comments\\Bootstrap"
+    }
+}
