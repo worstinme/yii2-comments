@@ -17,8 +17,5 @@
         "psr-4": {
             "worstinme\\comments\\": ""
         }
-    },
-    "extra": {
-        "bootstrap": "worstinme\\comments\\Bootstrap"
     }
 }

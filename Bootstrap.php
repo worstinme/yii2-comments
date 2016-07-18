@@ -9,11 +9,17 @@ class Bootstrap implements BootstrapInterface
 {
     public function bootstrap($app)
     {
-       	$this->logTarget = Yii::$app->getLog()->targets['debug'] = new LogTarget($this);
+       	
+       	if (YII_DEBUG) {
+       	//	$app->controllerMap['comments'] = ['class'=>'worstinme\comments\Controller'];
+       	}
 
-        // delay attaching event handler to the view component after it is fully configured
-        $app->on(Application::EVENT_BEFORE_REQUEST, function () use ($app) {
-            $app->getView()->on(View::EVENT_END_BODY, [$this, 'renderToolbar']);
-        });       
+       	/*
+
+	    "extra": {
+	        "bootstrap": "worstinme\\comments\\Bootstrap"
+	    }
+    */
+       
     }
 }
