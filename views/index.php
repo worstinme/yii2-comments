@@ -113,6 +113,7 @@ $("#comments")
 	})
 	.on("click","a[data-reply-main]",function(e){
 		e.preventDefault();
+		$("#respond input[name='Comments[parent_id]']").val(0);
 		var respond = $("#respond").removeClass('reply').detach();
 		respond.appendTo("#comments");
 		$("#respond a[data-reply-main]").addClass('uk-hidden');
